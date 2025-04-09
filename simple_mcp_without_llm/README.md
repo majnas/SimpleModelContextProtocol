@@ -1,5 +1,10 @@
 # Simple Math Client and Server Example ➕➖
 
+<div align="center">
+  <kbd style="width: 2px"><img src="smcp.png" width="100%"></kbd>
+</div>
+
+
 This repository contains a simple example demonstrating the use of the `mcp` library for creating a client-server application where the client can call mathematical functions exposed by the server. 🚀
 
 ## Overview 👀
