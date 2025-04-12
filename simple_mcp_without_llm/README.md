@@ -38,6 +38,32 @@ The example consists of three Python scripts:
         ```
         This client will launch the server and start an interactive command-line interface.
 
+        ```bash
+        -> % python client.py
+
+        MCP Client Started!
+        Type your tool name or 'quit' to exit.
+
+        Enter command (or 'quit' to exit): add
+        [04/12/25 12:51:18] INFO     Processing request of type ListToolsRequest                                                            server.py:534
+        Available tools: ['add', 'mult']
+        Enter arguments for add (JSON format): {"a": 1, "b":2}
+        [04/12/25 12:51:30] INFO     Processing request of type                                                                             server.py:534
+
+        Result: meta=None content=[TextContent(type='text', text='3', annotations=None)] isError=False
+
+        Enter command (or 'quit' to exit): mult
+        [04/12/25 12:51:34] INFO     Processing request of type ListToolsRequest                                                            server.py:534
+        Available tools: ['add', 'mult']
+        Enter arguments for mult (JSON format): {"a": 1.81, "b": 2.65}
+        [04/12/25 12:52:13] INFO     Processing request of type CallToolRequest                                                             server.py:534
+
+        Result: meta=None content=[TextContent(type='text', text='4.7965', annotations=None)] isError=False
+
+        Enter command (or 'quit' to exit): quit
+        Exiting chat loop.
+        ```
+
 ## Script Details 📜
 
 ### `math_server.py`
