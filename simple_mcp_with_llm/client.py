@@ -195,14 +195,16 @@ async def main():
     try:
         # Handle server argument
         server_arg = args.server
-        if server_arg.endswith('.py') and os.path.isfile(server_arg):
+        print(server_arg)
+        if (server_arg.endswith('.py') or server_arg.endswith('.js')) and os.path.isfile(server_arg):
             # Single server script
             server_name = os.path.splitext(os.path.basename(server_arg))[0]
             await client.connect_to_server(server_name, server_arg)
-        elif '/*' in server_arg:
+        elif '*' in server_arg:
             # Glob pattern
             pattern = server_arg
             server_files = glob.glob(pattern)
+            print(server_files)
             if not server_files:
                 print(f"No server scripts found matching pattern: {pattern}")
                 sys.exit(1)
