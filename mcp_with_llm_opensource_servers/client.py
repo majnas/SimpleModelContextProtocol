@@ -223,8 +223,8 @@ async def main(args):
             server_name, _ = server_arg.split(':', 1)
 
             current_directory = os.getcwd()
-            data_dir = os.path.join(current_directory, "Data")
-            cfg_dir = os.path.join(current_directory, "Config")
+            data_dir = os.path.join(current_directory, "data_dir_to_mount")
+            cfg_dir = os.path.join(current_directory, "config_dir_to_mount")
 
             docker_args = [
                 "run", "-i", "--rm",
