@@ -53,3 +53,7 @@ The file `myfile.txt` has been successfully created under `/projects/Data/Test_F
 ```
 
 # terminal screenshot
+# Path Finding
+<div align="center">
+  <kbd style="width: 2px"><img src="mcp_filesystem.png" width="125%"></kbd>
+</div>
