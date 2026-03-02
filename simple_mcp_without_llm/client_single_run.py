@@ -27,7 +27,7 @@ async def main():
 
             # Call the "mult" tool with two numbers.
             result = await session.call_tool("mult", {"a": 2.5, "b": 5.1})
-            print("Result of add(2.5, 5.1):", result)
+            print("Result of mult(2.5, 5.1):", result)
 
 if __name__ == "__main__":
     asyncio.run(main())
